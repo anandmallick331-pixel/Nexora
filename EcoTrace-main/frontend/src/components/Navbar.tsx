@@ -217,10 +217,10 @@ export const Navbar: React.FC<NavbarProps> = ({
                     ? 'bg-white/10 hover:bg-white/20 text-white border-white/20 shadow-xs'
                     : 'bg-[#EBF2EA] hover:bg-[#D5E4D2] text-[#1A381E] border-[#C2D8BF]'
                 }`}
-                title="Ask EcoTrace Data-Grounded AI"
+                title="Ask Nexora Data-Grounded AI"
               >
                 <Sparkles className="w-4 h-4 text-[#244E31] dark:text-[#A9D19E]" />
-                <span>EcoTrace AI</span>
+                <span>Nexora AI</span>
               </button>
             )}
 
@@ -343,7 +343,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 }`}
               >
                 <Sparkles className="w-4 h-4 text-[#244E31]" />
-                <span>Ask EcoTrace AI</span>
+                <span>Ask Nexora AI</span>
               </button>
             )}
 

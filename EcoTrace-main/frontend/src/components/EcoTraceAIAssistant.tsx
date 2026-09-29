@@ -97,7 +97,7 @@ export const EcoTraceAIAssistant: React.FC<EcoTraceAIAssistantProps> = ({
           {
             id: 'welcome',
             sender: 'ai',
-            text: 'Hello! I am **EcoTrace AI**, your data-grounded regenerative tourism intelligence assistant. I answer questions using audited telemetry, empirical impact scores, evidence provenance, and scenario simulations from the EcoTrace Consensus Registry.\n\nAsk me anything about this destination or pick a quick prompt below.',
+            text: 'Hello! I am **Nexora AI**, your data-grounded regenerative tourism intelligence assistant. I answer questions using audited telemetry, empirical impact scores, evidence provenance, and scenario simulations from the Nexora Consensus Registry.\n\nAsk me anything about this destination or pick a quick prompt below.',
             timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
           },
         ]);
@@ -175,7 +175,7 @@ export const EcoTraceAIAssistant: React.FC<EcoTraceAIAssistantProps> = ({
       const errorMsg: ChatMessage = {
         id: `ai-err-${Date.now()}`,
         sender: 'ai',
-        text: '⚠️ I encountered an error connecting to the EcoTrace Grounding Service. Please check if the backend is reachable, or try asking about another recorded destination indicator.',
+        text: '⚠️ I encountered an error connecting to the Nexora Grounding Service. Please check if the backend is reachable, or try asking about another recorded destination indicator.',
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         isError: true,
       };
@@ -247,7 +247,7 @@ export const EcoTraceAIAssistant: React.FC<EcoTraceAIAssistantProps> = ({
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="text-base sm:text-lg font-serif font-bold text-white leading-tight">
-                  EcoTrace AI
+                  Nexora AI
                 </h2>
                 <span className="text-[10px] font-bold uppercase tracking-wider bg-[#A9D19E]/20 text-[#A9D19E] px-2 py-0.5 rounded-full border border-[#A9D19E]/30">
                   Data-Grounded
@@ -430,7 +430,7 @@ export const EcoTraceAIAssistant: React.FC<EcoTraceAIAssistantProps> = ({
                           </div>
 
                           <p className="text-[10px] text-[#92400E] italic">
-                            *Projected via EcoTrace dynamic simulation engine. Not a historical fact.
+                            *Projected via Nexora dynamic simulation engine. Not a historical fact.
                           </p>
                         </div>
                       )}
@@ -576,7 +576,7 @@ export const EcoTraceAIAssistant: React.FC<EcoTraceAIAssistantProps> = ({
               type="text"
               value={inputQuery}
               onChange={(e) => setInputQuery(e.target.value)}
-              placeholder={`Ask EcoTrace AI about ${activeDestName}...`}
+              placeholder={`Ask Nexora AI about ${activeDestName}...`}
               disabled={isLoading}
               className="flex-1 bg-white border border-[#E8E3D7] rounded-2xl px-4 py-3 text-xs sm:text-sm font-medium text-[#1A381E] focus:outline-hidden focus:ring-2 focus:ring-[#244E31] shadow-2xs"
             />
@@ -590,7 +590,7 @@ export const EcoTraceAIAssistant: React.FC<EcoTraceAIAssistantProps> = ({
             </button>
           </form>
           <div className="text-[10px] text-center text-[#8C9B8B] mt-2">
-            Strictly grounded in EcoTrace database metrics &amp; statutory evidence. Zero hallucinated values.
+            Strictly grounded in Nexora database metrics &amp; statutory evidence. Zero hallucinated values.
           </div>
         </div>
 

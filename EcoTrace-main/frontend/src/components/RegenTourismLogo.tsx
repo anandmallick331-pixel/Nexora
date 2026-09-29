@@ -49,7 +49,7 @@ export const RegenTourismLogo: React.FC<RegenTourismLogoProps> = ({
       fill="none" 
       xmlns="http://www.w3.org/2000/svg" 
       className={`${emblemSizes[size]} shrink-0 transition-transform duration-200 group-hover:scale-105 select-none`}
-      aria-label="EcoTrace Emblem"
+      aria-label="Nexora Emblem"
     >
       <defs>
         <clipPath id="compassInnerClip">
@@ -138,13 +138,13 @@ export const RegenTourismLogo: React.FC<RegenTourismLogoProps> = ({
   }
 
   // Wordmark typography matching the uploaded image:
-  // "EcoTrace" in a high-contrast, classic serif font
+  // "Nexora" in a high-contrast, classic serif font
   const Wordmark = (
     <span 
       className={`font-serif font-bold tracking-tight leading-none ${titleSizes[size]}`}
       style={{ color: textColor }}
     >
-      EcoTrace
+      Nexora
     </span>
   );
 

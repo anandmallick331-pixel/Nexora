@@ -54,7 +54,7 @@ export class ErrorBoundary extends Component<Props, State> {
               className="w-full bg-[#1A381E] hover:bg-[#244E31] text-white text-xs font-semibold py-3 px-4 rounded-full transition-all cursor-pointer flex items-center justify-center gap-2"
             >
               <RefreshCw className="w-4 h-4" />
-              <span>Reload EcoTrace Intelligence</span>
+              <span>Reload Nexora Intelligence</span>
             </button>
           </div>
         </div>

@@ -201,7 +201,7 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="flex items-center gap-2 text-center md:text-left">
             <span className="material-symbols-outlined text-base text-[#cdead0]" data-icon="eco">eco</span>
             <p className="text-white/80">
-              © 2024 EcoTrace. Enlightened Sustainability for Global Tourism.
+              © 2024 Nexora. Enlightened Sustainability for Global Tourism.
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-6 text-[#A3B899]">

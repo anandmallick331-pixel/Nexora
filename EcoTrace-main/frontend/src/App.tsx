@@ -662,18 +662,18 @@ export default function App() {
         initialQuery={aiInitialQuery}
       />
 
-      {/* Floating EcoTrace AI Assistant Button */}
+      {/* Floating Nexora AI Assistant Button */}
       <button
         id="floating-ai-assistant-btn"
         onClick={() => handleOpenAI()}
         className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-[#1A381E] via-[#204427] to-[#244E31] text-white px-4 py-3 rounded-full shadow-2xl border border-white/20 flex items-center gap-2.5 hover:scale-105 transition-all duration-300 cursor-pointer active:scale-95 group"
-        title="Ask EcoTrace data-grounded AI assistant"
+        title="Ask Nexora data-grounded AI assistant"
       >
         <div className="p-1 bg-white/15 rounded-full text-[#A9D19E] group-hover:rotate-12 transition-transform">
           <Sparkles className="w-4 h-4" />
         </div>
         <div className="text-left">
-          <span className="text-xs font-bold block leading-none">EcoTrace AI</span>
+          <span className="text-xs font-bold block leading-none">Nexora AI</span>
           <span className="text-[10px] text-[#C5D8C3] block leading-tight mt-0.5">Ask about destination</span>
         </div>
       </button>

@@ -86,19 +86,24 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
           {/* Headline Content */}
           <div className="flex flex-col gap-3 sm:gap-4 max-w-2xl text-left">
             <span className="text-white/80 italic text-base sm:text-lg font-sans tracking-wide">
-              The first regenerative map of tourism
+              Evidence-driven intelligence for tertiary-sector businesses
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-serif text-white leading-[1.12] tracking-tight">
-              Where every journey <br />
-              <span className="italic text-white/90 font-serif">leaves a trace.</span>
+              See what’s happening. <br />
+              <span className="italic text-white/90 font-serif">Understand what’s next.</span>
             </h1>
           </div>
 
           {/* Secondary Content & Search */}
           <div className="flex flex-col gap-6 sm:gap-8 max-w-xl lg:pl-8">
-            <p className="text-base sm:text-lg font-sans text-white/90 max-w-xl leading-relaxed">
-              Track and understand the impact of tourism on environment, local communities and natural assets. Make better choices. Create lasting positive change.
-            </p>
+            <div className="flex flex-col gap-3">
+              <p className="text-base sm:text-lg font-sans text-white/90 max-w-xl leading-relaxed">
+                Nexora connects business data, evidence, and trends to detect problems like cash-flow pressure, declining demand, rising costs, and operational inefficiencies — then helps you understand the causes, explore solutions, and track what changes.
+              </p>
+              <p className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-white/80 font-sans">
+                Detect. Explain. Solve. Measure.
+              </p>
+            </div>
 
             {/* Search Bar Form */}
             <div className="relative w-full">

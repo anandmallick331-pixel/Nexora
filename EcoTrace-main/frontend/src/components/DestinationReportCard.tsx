@@ -306,7 +306,7 @@ export const DestinationReportCard: React.FC<DestinationReportCardProps> = ({
                     <button
                       onClick={() => onOpenAI('Why is this destination impact score like this, and what should we improve first?')}
                       className="text-[11px] font-bold text-[#1A381E] hover:bg-[#EBF2EA] flex items-center gap-1 cursor-pointer bg-[#EBF2EA]/70 px-3 py-1 rounded-full border border-[#C2D8BF] transition-colors"
-                      title="Ask EcoTrace AI grounded explanation"
+                      title="Ask Nexora AI grounded explanation"
                     >
                       <Sparkles className="w-3 h-3 text-[#244E31]" />
                       <span>Ask AI Explanation</span>
