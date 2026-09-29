@@ -1,0 +1,13 @@
+{
+  "name": "ecotrace-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EcoTrace Root Proxy Runner",
+  "scripts": {
+    "dev": "npm --prefix EcoTrace-main run dev",
+    "start": "npm --prefix EcoTrace-main run dev",
+    "dev:backend": "npm --prefix EcoTrace-main run dev:backend",
+    "dev:frontend": "npm --prefix EcoTrace-main run dev:frontend",
+    "build:frontend": "npm --prefix EcoTrace-main run build:frontend"
+  }
+}
