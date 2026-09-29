@@ -8,6 +8,13 @@
 
 import { authService } from './authService';
 
+const API_BASE_URL = (() => {
+  const envUrl = (import.meta as any).env?.VITE_API_URL?.trim();
+  if (!envUrl) return '/api/v1';
+  const clean = envUrl.replace(/\/+$/, '');
+  return clean.endsWith('/api/v1') ? clean : `${clean}/api/v1`;
+})();
+
 export interface CommunityEvidenceSubmission {
   id: number | string;
   submission_id: string;
@@ -97,7 +104,7 @@ export const communityEvidenceService = {
           formData.append('raw_text', input.raw_text);
         }
 
-        const res = await fetch('/api/v1/community-evidence/submit', {
+        const res = await fetch(`${API_BASE_URL}/community-evidence/submit`, {
           method: 'POST',
           body: formData,
         });
@@ -130,7 +137,7 @@ export const communityEvidenceService = {
           file_name: null,
         };
 
-        const res = await fetch('/api/v1/community-evidence/submit', {
+        const res = await fetch(`${API_BASE_URL}/community-evidence/submit`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -199,7 +206,7 @@ export const communityEvidenceService = {
       }
 
       const authHeaders = authService.getAuthHeaders();
-      const res = await fetch(`/api/v1/community-evidence?${params.toString()}`, {
+      const res = await fetch(`${API_BASE_URL}/community-evidence?${params.toString()}`, {
         headers: {
           ...authHeaders,
         },
@@ -230,7 +237,7 @@ export const communityEvidenceService = {
   getSubmissionById: async (idOrCode: string): Promise<CommunityEvidenceSubmission | null> => {
     try {
       const authHeaders = authService.getAuthHeaders();
-      const res = await fetch(`/api/v1/community-evidence/${encodeURIComponent(idOrCode)}`, {
+      const res = await fetch(`${API_BASE_URL}/community-evidence/${encodeURIComponent(idOrCode)}`, {
         headers: {
           ...authHeaders,
         },
@@ -263,7 +270,7 @@ export const communityEvidenceService = {
       override_metric_code: overrideMetricCode,
     };
 
-    const res = await fetch(`/api/v1/community-evidence/${encodeURIComponent(idOrCode)}/accept-and-verify`, {
+    const res = await fetch(`${API_BASE_URL}/community-evidence/${encodeURIComponent(idOrCode)}/accept-and-verify`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -298,7 +305,7 @@ export const communityEvidenceService = {
       clarification_instructions: instructions,
     };
 
-    const res = await fetch(`/api/v1/community-evidence/${encodeURIComponent(idOrCode)}/request-clarification`, {
+    const res = await fetch(`${API_BASE_URL}/community-evidence/${encodeURIComponent(idOrCode)}/request-clarification`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -332,7 +339,7 @@ export const communityEvidenceService = {
       reason,
     };
 
-    const res = await fetch(`/api/v1/community-evidence/${encodeURIComponent(idOrCode)}/reject`, {
+    const res = await fetch(`${API_BASE_URL}/community-evidence/${encodeURIComponent(idOrCode)}/reject`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

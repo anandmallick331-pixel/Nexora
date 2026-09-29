@@ -16,6 +16,13 @@ export interface UserProfile {
 const TOKEN_KEY = 'ecotrace_auth_token';
 const USER_KEY = 'ecotrace_auth_user';
 
+const API_BASE_URL = (() => {
+  const envUrl = (import.meta as any).env?.VITE_API_URL?.trim();
+  if (!envUrl) return '/api/v1';
+  const clean = envUrl.replace(/\/+$/, '');
+  return clean.endsWith('/api/v1') ? clean : `${clean}/api/v1`;
+})();
+
 export const authService = {
   /**
    * Returns current access token if any
@@ -88,7 +95,7 @@ export const authService = {
       : { username: username || '', password: password || '' };
 
     try {
-      const res = await fetch('/api/v1/auth/login', {
+      const res = await fetch(`${API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -153,7 +160,7 @@ export const authService = {
     try {
       localStorage.removeItem(TOKEN_KEY);
       localStorage.removeItem(USER_KEY);
-      fetch('/api/v1/auth/logout', { method: 'POST' }).catch(() => {});
+      fetch(`${API_BASE_URL}/auth/logout`, { method: 'POST' }).catch(() => {});
     } catch (e) {
       console.warn('Logout cleanup notice:', e);
     }

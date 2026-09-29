@@ -44,6 +44,7 @@ import {
 } from 'lucide-react';
 import {
   api,
+  API_BASE_URL,
   LiveTravelAdvisory,
   RecentOfficialWarning,
   LiveTravelOutlookItem,
@@ -1526,7 +1527,7 @@ export const LiveTravelRiskAdvisoryCard: React.FC<LiveTravelRiskAdvisoryCardProp
     if (!riskState || !advisory) return;
     setAdaptiveLoading(true);
     try {
-      const res = await fetch('/api/v1/travel-advisory/adaptive/evaluate', {
+      const res = await fetch(`${API_BASE_URL}/travel-advisory/adaptive/evaluate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

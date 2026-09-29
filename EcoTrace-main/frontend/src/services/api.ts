@@ -8,7 +8,16 @@
 
 import { authService } from './authService';
 
-const API_BASE_URL = (import.meta as any).env?.VITE_API_URL || '/api/v1';
+function resolveApiBaseUrl(): string {
+  const envUrl = (import.meta as any).env?.VITE_API_URL?.trim();
+  if (!envUrl) {
+    return '/api/v1';
+  }
+  const cleanUrl = envUrl.replace(/\/+$/, '');
+  return cleanUrl.endsWith('/api/v1') ? cleanUrl : `${cleanUrl}/api/v1`;
+}
+
+export const API_BASE_URL = resolveApiBaseUrl();
 // ── Backend Contract Interfaces ──────────────────────────────────────────────
 
 export interface BackendDestination {
